@@ -154,6 +154,7 @@ struct DifferenceView: View {
                 .frame(maxWidth: 400)
 
                 Toggle("Highlighting", isOn: $usingThreshold)
+                    .keyboardShortcut("h", modifiers: [.command, .shift])
             }
         }
         .task(id: usingThreshold) {
