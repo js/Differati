@@ -17,7 +17,9 @@ struct OnionView: View {
         VStack {
             ZStack {
                 ImageView(nsImage: old)
+                    .border(.red)
                 ImageView(nsImage: new)
+                    .border(.green)
                     .opacity(opacity)
             }
 

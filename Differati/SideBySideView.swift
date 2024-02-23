@@ -13,8 +13,18 @@ struct SideBySideView: View {
 
     var body: some View {
         HStack {
-            ImageView(nsImage: old)
-            ImageView(nsImage: new)
+            VStack {
+                Text("Old")
+                    .foregroundStyle(Color.red)
+                ImageView(nsImage: old)
+                    .border(.red)
+            }
+            VStack {
+                Text("New")
+                    .foregroundStyle(Color.green)
+                ImageView(nsImage: new)
+                    .border(.green)
+            }
         }
     }
 }
