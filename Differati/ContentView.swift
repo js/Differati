@@ -15,6 +15,10 @@ struct ContentView: View {
                     .tabItem {
                         Label("Side by Side", systemImage: "platter.2.filled.ipad.landscape")
                     }
+                SwipeView()
+                    .tabItem {
+                        Label("Swipe", systemImage: "arrow.left.and.line.vertical.and.arrow.right")
+                    }
                 OnionView()
                     .tabItem {
                         Label("Onion", systemImage: "square.2.layers.3d")
@@ -26,7 +30,7 @@ struct ContentView: View {
             }
 
 //            Button("Overwrite old with new") {
-//                
+//
 //            }
         }
         .padding()

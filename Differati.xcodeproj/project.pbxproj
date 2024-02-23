@@ -18,6 +18,7 @@
 		04CCB7F12B890E4F00280F43 /* SideBySideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7F02B890E4F00280F43 /* SideBySideView.swift */; };
 		04CCB7F32B8910B100280F43 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7F22B8910B100280F43 /* ImageView.swift */; };
 		04CCB7F52B89122500280F43 /* OnionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7F42B89122500280F43 /* OnionView.swift */; };
+		04CCB7F72B891A2C00280F43 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7F62B891A2C00280F43 /* SwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		04CCB7F02B890E4F00280F43 /* SideBySideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBySideView.swift; sourceTree = "<group>"; };
 		04CCB7F22B8910B100280F43 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		04CCB7F42B89122500280F43 /* OnionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnionView.swift; sourceTree = "<group>"; };
+		04CCB7F62B891A2C00280F43 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				04CCB7EE2B890A8D00280F43 /* DifferenceView.swift */,
 				04CCB7F02B890E4F00280F43 /* SideBySideView.swift */,
 				04CCB7F42B89122500280F43 /* OnionView.swift */,
+				04CCB7F62B891A2C00280F43 /* SwipeView.swift */,
 				04CCB7F22B8910B100280F43 /* ImageView.swift */,
 				04CCB7C72B88E29D00280F43 /* Assets.xcassets */,
 				04CCB7CC2B88E29D00280F43 /* Differati.entitlements */,
@@ -274,6 +277,7 @@
 				04CCB7F32B8910B100280F43 /* ImageView.swift in Sources */,
 				04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */,
 				04CCB7EF2B890A8D00280F43 /* DifferenceView.swift in Sources */,
+				04CCB7F72B891A2C00280F43 /* SwipeView.swift in Sources */,
 				04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */,
 				04CCB7F52B89122500280F43 /* OnionView.swift in Sources */,
 				04CCB7F12B890E4F00280F43 /* SideBySideView.swift in Sources */,
