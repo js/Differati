@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */; };
+		04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C52B88E29B00280F43 /* ContentView.swift */; };
+		04CCB7C82B88E29D00280F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CCB7C72B88E29D00280F43 /* Assets.xcassets */; };
+		04CCB7CB2B88E29D00280F43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CCB7CA2B88E29D00280F43 /* Preview Assets.xcassets */; };
+		04CCB7D62B88E29E00280F43 /* DifferatiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7D52B88E29E00280F43 /* DifferatiTests.swift */; };
+		04CCB7E02B88E29E00280F43 /* DifferatiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7DF2B88E29E00280F43 /* DifferatiUITests.swift */; };
+		04CCB7E22B88E29E00280F43 /* DifferatiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7E12B88E29E00280F43 /* DifferatiUITestsLaunchTests.swift */; };
+		04CCB7EF2B890A8D00280F43 /* DifferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7EE2B890A8D00280F43 /* DifferenceView.swift */; };
+		04CCB7F12B890E4F00280F43 /* SideBySideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7F02B890E4F00280F43 /* SideBySideView.swift */; };
+		04CCB7F32B8910B100280F43 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7F22B8910B100280F43 /* ImageView.swift */; };
+		04CCB7F52B89122500280F43 /* OnionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7F42B89122500280F43 /* OnionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04CCB7D22B88E29E00280F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CCB7B82B88E29B00280F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CCB7BF2B88E29B00280F43;
+			remoteInfo = Differati;
+		};
+		04CCB7DC2B88E29E00280F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CCB7B82B88E29B00280F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CCB7BF2B88E29B00280F43;
+			remoteInfo = Differati;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04CCB7C02B88E29B00280F43 /* Differati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differati.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferatiApp.swift; sourceTree = "<group>"; };
+		04CCB7C52B88E29B00280F43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04CCB7C72B88E29D00280F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04CCB7CA2B88E29D00280F43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04CCB7CC2B88E29D00280F43 /* Differati.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Differati.entitlements; sourceTree = "<group>"; };
+		04CCB7D12B88E29E00280F43 /* DifferatiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DifferatiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CCB7D52B88E29E00280F43 /* DifferatiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferatiTests.swift; sourceTree = "<group>"; };
+		04CCB7DB2B88E29E00280F43 /* DifferatiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DifferatiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CCB7DF2B88E29E00280F43 /* DifferatiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferatiUITests.swift; sourceTree = "<group>"; };
+		04CCB7E12B88E29E00280F43 /* DifferatiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferatiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04CCB7EE2B890A8D00280F43 /* DifferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceView.swift; sourceTree = "<group>"; };
+		04CCB7F02B890E4F00280F43 /* SideBySideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBySideView.swift; sourceTree = "<group>"; };
+		04CCB7F22B8910B100280F43 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		04CCB7F42B89122500280F43 /* OnionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04CCB7BD2B88E29B00280F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCB7CE2B88E29E00280F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCB7D82B88E29E00280F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04CCB7B72B88E29B00280F43 = {
+			isa = PBXGroup;
+			children = (
+				04CCB7C22B88E29B00280F43 /* Differati */,
+				04CCB7D42B88E29E00280F43 /* DifferatiTests */,
+				04CCB7DE2B88E29E00280F43 /* DifferatiUITests */,
+				04CCB7C12B88E29B00280F43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04CCB7C12B88E29B00280F43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB7C02B88E29B00280F43 /* Differati.app */,
+				04CCB7D12B88E29E00280F43 /* DifferatiTests.xctest */,
+				04CCB7DB2B88E29E00280F43 /* DifferatiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04CCB7C22B88E29B00280F43 /* Differati */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */,
+				04CCB7C52B88E29B00280F43 /* ContentView.swift */,
+				04CCB7EE2B890A8D00280F43 /* DifferenceView.swift */,
+				04CCB7F02B890E4F00280F43 /* SideBySideView.swift */,
+				04CCB7F42B89122500280F43 /* OnionView.swift */,
+				04CCB7F22B8910B100280F43 /* ImageView.swift */,
+				04CCB7C72B88E29D00280F43 /* Assets.xcassets */,
+				04CCB7CC2B88E29D00280F43 /* Differati.entitlements */,
+				04CCB7C92B88E29D00280F43 /* Preview Content */,
+			);
+			path = Differati;
+			sourceTree = "<group>";
+		};
+		04CCB7C92B88E29D00280F43 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB7CA2B88E29D00280F43 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04CCB7D42B88E29E00280F43 /* DifferatiTests */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB7D52B88E29E00280F43 /* DifferatiTests.swift */,
+			);
+			path = DifferatiTests;
+			sourceTree = "<group>";
+		};
+		04CCB7DE2B88E29E00280F43 /* DifferatiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB7DF2B88E29E00280F43 /* DifferatiUITests.swift */,
+				04CCB7E12B88E29E00280F43 /* DifferatiUITestsLaunchTests.swift */,
+			);
+			path = DifferatiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04CCB7BF2B88E29B00280F43 /* Differati */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CCB7E52B88E29E00280F43 /* Build configuration list for PBXNativeTarget "Differati" */;
+			buildPhases = (
+				04CCB7BC2B88E29B00280F43 /* Sources */,
+				04CCB7BD2B88E29B00280F43 /* Frameworks */,
+				04CCB7BE2B88E29B00280F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Differati;
+			productName = Differati;
+			productReference = 04CCB7C02B88E29B00280F43 /* Differati.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04CCB7D02B88E29E00280F43 /* DifferatiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CCB7E82B88E29E00280F43 /* Build configuration list for PBXNativeTarget "DifferatiTests" */;
+			buildPhases = (
+				04CCB7CD2B88E29E00280F43 /* Sources */,
+				04CCB7CE2B88E29E00280F43 /* Frameworks */,
+				04CCB7CF2B88E29E00280F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CCB7D32B88E29E00280F43 /* PBXTargetDependency */,
+			);
+			name = DifferatiTests;
+			productName = DifferatiTests;
+			productReference = 04CCB7D12B88E29E00280F43 /* DifferatiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04CCB7DA2B88E29E00280F43 /* DifferatiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CCB7EB2B88E29E00280F43 /* Build configuration list for PBXNativeTarget "DifferatiUITests" */;
+			buildPhases = (
+				04CCB7D72B88E29E00280F43 /* Sources */,
+				04CCB7D82B88E29E00280F43 /* Frameworks */,
+				04CCB7D92B88E29E00280F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CCB7DD2B88E29E00280F43 /* PBXTargetDependency */,
+			);
+			name = DifferatiUITests;
+			productName = DifferatiUITests;
+			productReference = 04CCB7DB2B88E29E00280F43 /* DifferatiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04CCB7B82B88E29B00280F43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					04CCB7BF2B88E29B00280F43 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					04CCB7D02B88E29E00280F43 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 04CCB7BF2B88E29B00280F43;
+					};
+					04CCB7DA2B88E29E00280F43 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 04CCB7BF2B88E29B00280F43;
+					};
+				};
+			};
+			buildConfigurationList = 04CCB7BB2B88E29B00280F43 /* Build configuration list for PBXProject "Differati" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04CCB7B72B88E29B00280F43;
+			productRefGroup = 04CCB7C12B88E29B00280F43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04CCB7BF2B88E29B00280F43 /* Differati */,
+				04CCB7D02B88E29E00280F43 /* DifferatiTests */,
+				04CCB7DA2B88E29E00280F43 /* DifferatiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04CCB7BE2B88E29B00280F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCB7CB2B88E29D00280F43 /* Preview Assets.xcassets in Resources */,
+				04CCB7C82B88E29D00280F43 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCB7CF2B88E29E00280F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCB7D92B88E29E00280F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04CCB7BC2B88E29B00280F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCB7F32B8910B100280F43 /* ImageView.swift in Sources */,
+				04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */,
+				04CCB7EF2B890A8D00280F43 /* DifferenceView.swift in Sources */,
+				04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */,
+				04CCB7F52B89122500280F43 /* OnionView.swift in Sources */,
+				04CCB7F12B890E4F00280F43 /* SideBySideView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCB7CD2B88E29E00280F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCB7D62B88E29E00280F43 /* DifferatiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCB7D72B88E29E00280F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCB7E02B88E29E00280F43 /* DifferatiUITests.swift in Sources */,
+				04CCB7E22B88E29E00280F43 /* DifferatiUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CCB7D32B88E29E00280F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CCB7BF2B88E29B00280F43 /* Differati */;
+			targetProxy = 04CCB7D22B88E29E00280F43 /* PBXContainerItemProxy */;
+		};
+		04CCB7DD2B88E29E00280F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CCB7BF2B88E29B00280F43 /* Differati */;
+			targetProxy = 04CCB7DC2B88E29E00280F43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04CCB7E32B88E29E00280F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04CCB7E42B88E29E00280F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		04CCB7E62B88E29E00280F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Differati/Differati.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Differati/Preview Content\"";
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frosthaus.Differati;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		04CCB7E72B88E29E00280F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Differati/Differati.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Differati/Preview Content\"";
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frosthaus.Differati;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		04CCB7E92B88E29E00280F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frosthaus.DifferatiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Differati.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Differati";
+			};
+			name = Debug;
+		};
+		04CCB7EA2B88E29E00280F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frosthaus.DifferatiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Differati.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Differati";
+			};
+			name = Release;
+		};
+		04CCB7EC2B88E29E00280F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frosthaus.DifferatiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Differati;
+			};
+			name = Debug;
+		};
+		04CCB7ED2B88E29E00280F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frosthaus.DifferatiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Differati;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04CCB7BB2B88E29B00280F43 /* Build configuration list for PBXProject "Differati" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CCB7E32B88E29E00280F43 /* Debug */,
+				04CCB7E42B88E29E00280F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CCB7E52B88E29E00280F43 /* Build configuration list for PBXNativeTarget "Differati" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CCB7E62B88E29E00280F43 /* Debug */,
+				04CCB7E72B88E29E00280F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CCB7E82B88E29E00280F43 /* Build configuration list for PBXNativeTarget "DifferatiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CCB7E92B88E29E00280F43 /* Debug */,
+				04CCB7EA2B88E29E00280F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CCB7EB2B88E29E00280F43 /* Build configuration list for PBXNativeTarget "DifferatiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CCB7EC2B88E29E00280F43 /* Debug */,
+				04CCB7ED2B88E29E00280F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04CCB7B82B88E29B00280F43 /* Project object */;
+}
