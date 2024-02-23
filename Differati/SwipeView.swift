@@ -26,6 +26,15 @@ struct SwipeView: View {
                                 .frame(width: geo.size.width * percentage)
                         }
                     }
+                    .overlay(alignment: .leading) {
+                        GeometryReader { geo in
+                            Rectangle()
+                                .fill(.white)
+                                .opacity(0.05)
+                                .frame(width: 1, height: geo.size.height)
+                                .offset(x: geo.size.width * percentage)
+                        }
+                    }
             }
 
             Slider(value: $percentage, in: 0...1) {
