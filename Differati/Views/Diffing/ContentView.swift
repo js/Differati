@@ -25,7 +25,7 @@ struct ContentView: View {
             } else {
                 ContentUnavailableView(
                     "Image doesn't exist",
-                    image: "exclamationmark.triangle",
+                    systemImage: "exclamationmark.triangle",
                     description: Text("One of the images doesn't exist")
                 )
             }

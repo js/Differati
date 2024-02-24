@@ -22,6 +22,9 @@
 		04CCB7FB2B8A40BD00280F43 /* DiffImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7FA2B8A40BD00280F43 /* DiffImage.swift */; };
 		04CCB7FE2B8A410F00280F43 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7FD2B8A410F00280F43 /* WelcomeView.swift */; };
 		04CCB8002B8A42EE00280F43 /* ImageDiffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7FF2B8A42EE00280F43 /* ImageDiffer.swift */; };
+		04CCB8022B8A64D600280F43 /* CommandServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB8012B8A64D600280F43 /* CommandServer.swift */; };
+		04CCB80A2B8A665000280F43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB8092B8A665000280F43 /* main.swift */; };
+		04CCB80F2B8A66ED00280F43 /* CommandClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB80E2B8A66ED00280F43 /* CommandClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,18 @@
 			remoteInfo = Differati;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04CCB8052B8A665000280F43 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04CCB7C02B88E29B00280F43 /* Differati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differati.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +76,10 @@
 		04CCB7FA2B8A40BD00280F43 /* DiffImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffImage.swift; sourceTree = "<group>"; };
 		04CCB7FD2B8A410F00280F43 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		04CCB7FF2B8A42EE00280F43 /* ImageDiffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDiffer.swift; sourceTree = "<group>"; };
+		04CCB8012B8A64D600280F43 /* CommandServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandServer.swift; sourceTree = "<group>"; };
+		04CCB8072B8A665000280F43 /* differati-client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "differati-client"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CCB8092B8A665000280F43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		04CCB80E2B8A66ED00280F43 /* CommandClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +104,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04CCB8042B8A665000280F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -94,6 +120,7 @@
 				04CCB7C22B88E29B00280F43 /* Differati */,
 				04CCB7D42B88E29E00280F43 /* DifferatiTests */,
 				04CCB7DE2B88E29E00280F43 /* DifferatiUITests */,
+				04CCB8082B8A665000280F43 /* differati-client */,
 				04CCB7C12B88E29B00280F43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +131,7 @@
 				04CCB7C02B88E29B00280F43 /* Differati.app */,
 				04CCB7D12B88E29E00280F43 /* DifferatiTests.xctest */,
 				04CCB7DB2B88E29E00280F43 /* DifferatiUITests.xctest */,
+				04CCB8072B8A665000280F43 /* differati-client */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +179,7 @@
 			children = (
 				04CCB7FA2B8A40BD00280F43 /* DiffImage.swift */,
 				04CCB7FF2B8A42EE00280F43 /* ImageDiffer.swift */,
+				04CCB8012B8A64D600280F43 /* CommandServer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +204,15 @@
 				04CCB7EE2B890A8D00280F43 /* DifferenceView.swift */,
 			);
 			path = Diffing;
+			sourceTree = "<group>";
+		};
+		04CCB8082B8A665000280F43 /* differati-client */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB8092B8A665000280F43 /* main.swift */,
+				04CCB80E2B8A66ED00280F43 /* CommandClient.swift */,
+			);
+			path = "differati-client";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +271,23 @@
 			productReference = 04CCB7DB2B88E29E00280F43 /* DifferatiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		04CCB8062B8A665000280F43 /* differati-client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CCB80B2B8A665000280F43 /* Build configuration list for PBXNativeTarget "differati-client" */;
+			buildPhases = (
+				04CCB8032B8A665000280F43 /* Sources */,
+				04CCB8042B8A665000280F43 /* Frameworks */,
+				04CCB8052B8A665000280F43 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "differati-client";
+			productName = "differati-client";
+			productReference = 04CCB8072B8A665000280F43 /* differati-client */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +309,9 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 04CCB7BF2B88E29B00280F43;
 					};
+					04CCB8062B8A665000280F43 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 				};
 			};
 			buildConfigurationList = 04CCB7BB2B88E29B00280F43 /* Build configuration list for PBXProject "Differati" */;
@@ -272,6 +330,7 @@
 				04CCB7BF2B88E29B00280F43 /* Differati */,
 				04CCB7D02B88E29E00280F43 /* DifferatiTests */,
 				04CCB7DA2B88E29E00280F43 /* DifferatiUITests */,
+				04CCB8062B8A665000280F43 /* differati-client */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CCB7F32B8910B100280F43 /* ImageView.swift in Sources */,
+				04CCB8022B8A64D600280F43 /* CommandServer.swift in Sources */,
 				04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */,
 				04CCB7EF2B890A8D00280F43 /* DifferenceView.swift in Sources */,
 				04CCB7F72B891A2C00280F43 /* SwipeView.swift in Sources */,
@@ -334,6 +394,15 @@
 			files = (
 				04CCB7E02B88E29E00280F43 /* DifferatiUITests.swift in Sources */,
 				04CCB7E22B88E29E00280F43 /* DifferatiUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCB8032B8A665000280F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCB80F2B8A66ED00280F43 /* CommandClient.swift in Sources */,
+				04CCB80A2B8A665000280F43 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +666,28 @@
 			};
 			name = Release;
 		};
+		04CCB80C2B8A665000280F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		04CCB80D2B8A665000280F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8M5UKX869;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -632,6 +723,15 @@
 			buildConfigurations = (
 				04CCB7EC2B88E29E00280F43 /* Debug */,
 				04CCB7ED2B88E29E00280F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CCB80B2B8A665000280F43 /* Build configuration list for PBXNativeTarget "differati-client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CCB80C2B8A665000280F43 /* Debug */,
+				04CCB80D2B8A665000280F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

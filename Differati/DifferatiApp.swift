@@ -10,10 +10,15 @@ import SwiftUI
 @main
 struct DifferatiApp: App {
     @State private var selectedTab: ContentView.Tab = .sideBySide
+    @State private var server = CommandServer()
+    @Environment(\.openWindow) private var openWindow
 
     var body: some Scene {
         WindowGroup("Welcome") {
             WelcomeView()
+                .task {
+                    server.start(onReceive: handleMessage)
+                }
         }
 
         WindowGroup("Image Diff", for: DiffImage.self) { $diff in
@@ -22,7 +27,7 @@ struct DifferatiApp: App {
             } else {
                 ContentUnavailableView(
                     "Image error",
-                    image: "exclamationmark.triangle",
+                    systemImage: "exclamationmark.triangle",
                     description: Text("Got an empty binding")
                 )
             }
@@ -41,5 +46,22 @@ struct DifferatiApp: App {
                 Divider()
             }
         }
+    }
+
+    private func handleMessage(_ message: String) -> String? {
+        let pairs = message.split(separator: "\n").map(String.init)
+
+        guard pairs.count == 2 else {
+            return "unknown format"
+        }
+
+        let diff = DiffImage(
+            oldImageFileUrl: URL(fileURLWithPath: pairs[0]),
+            newImageFileUrl: URL(fileURLWithPath: pairs[1])
+        )
+
+        openWindow(value: diff)
+
+        return nil
     }
 }
