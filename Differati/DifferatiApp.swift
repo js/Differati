@@ -30,7 +30,7 @@ struct DifferatiApp: App {
         .commandsRemoved()
         .commands {
             CommandGroup(before: .toolbar) {
-                Button("Show Side by Side") { selectedTab = .sideBySide }
+                Button("Show 2-Up") { selectedTab = .sideBySide }
                     .keyboardShortcut("1", modifiers: .command)
                 Button("Show Swipe") { selectedTab = .swipe }
                     .keyboardShortcut("2", modifiers: .command)

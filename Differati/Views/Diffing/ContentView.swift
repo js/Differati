@@ -34,14 +34,15 @@ struct ContentView: View {
 //
 //            }
         }
-        .padding()  
+        .padding()
+        .frame(minWidth: 400, minHeight: 300)
     }
 
     private var tabView: some View {
         TabView(selection: $selectedTab) {
             SideBySideView(diff: diff)
                 .tabItem {
-                    Label("Side by Side", systemImage: "platter.2.filled.ipad.landscape")
+                    Label("2-Up", systemImage: "platter.2.filled.ipad.landscape")
                 }
                 .tag(Tab.sideBySide)
             SwipeView(diff: diff)
