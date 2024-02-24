@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct SwipeView: View {
-    let old = NSImage(named: "one")!
-    let new = NSImage(named: "two")!
+    let diff: DiffImage
 
     @State private var percentage = 0.5
 
     var body: some View {
         VStack {
             ZStack {
-                ImageView(nsImage: old)
+                ImageView(nsImage: diff.oldImage)
                     .border(.red)
-                ImageView(nsImage: new)
+                ImageView(nsImage: diff.newImage)
                     .border(.green)
                     .mask(alignment: .leading) {
                         GeometryReader { geo in
@@ -45,5 +44,5 @@ struct SwipeView: View {
 }
 
 #Preview {
-    SwipeView()
+    SwipeView(diff: .preview)
 }

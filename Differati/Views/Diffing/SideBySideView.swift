@@ -8,21 +8,20 @@
 import SwiftUI
 
 struct SideBySideView: View {
-    let old = NSImage(named: "one")!
-    let new = NSImage(named: "two")!
+    let diff: DiffImage
 
     var body: some View {
         HStack {
             VStack {
                 Text("Old")
                     .foregroundStyle(Color.red)
-                ImageView(nsImage: old)
+                ImageView(nsImage: diff.oldImage)
                     .border(.red)
             }
             VStack {
                 Text("New")
                     .foregroundStyle(Color.green)
-                ImageView(nsImage: new)
+                ImageView(nsImage: diff.newImage)
                     .border(.green)
             }
         }
@@ -30,5 +29,5 @@ struct SideBySideView: View {
 }
 
 #Preview {
-    SideBySideView()
+    SideBySideView(diff: .preview)
 }

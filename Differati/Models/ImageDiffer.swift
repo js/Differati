@@ -1,10 +1,11 @@
 //
-//  DiffView.swift
+//  ImageDiffer.swift
 //  Differati
 //
-//  Created by Johan Sørensen on 23/02/2024.
+//  Created by Johan Sørensen on 24/02/2024.
 //
 
+import Foundation
 import SwiftUI
 
 extension NSImage {
@@ -118,59 +119,11 @@ final class ImageDiffer {
 
         diffFilter.setValue(old, forKey: kCIInputImageKey)
         diffFilter.setValue(new, forKey: kCIInputBackgroundImageKey)
-        
+
         guard let diffed = diffFilter.outputImage else {
             throw DifferenceError.noOutput
         }
-        
+
         return diffed
     }
-}
-
-struct DifferenceView: View {
-    let old = NSImage(named: "one")!
-    let new = NSImage(named: "two")!
-
-    @State private var diffedImage: Image?
-    @State private var opacity = 1.0
-    @State private var usingThreshold = false
-
-    var body: some View {
-        VStack {
-            ZStack {
-                ImageView(nsImage: old)
-                if let diffedImage {
-                    ImageView(diffedImage)
-                        .opacity(opacity)
-                } else {
-                    ProgressView()
-                }
-            }
-
-            HStack {
-                Slider(value: $opacity, in: 0...1) {
-                    Text("Opacity")
-                }
-                .frame(maxWidth: 400)
-
-                Toggle("Highlighting", isOn: $usingThreshold)
-                    .keyboardShortcut("h", modifiers: [.command, .shift])
-            }
-        }
-        .task(id: usingThreshold) {
-            let differ = ImageDiffer(oldImage: old, newImage: new)
-            if let cgImage = try? differ.difference(usingThreshold: usingThreshold) {
-                let nsImage = NSImage(
-                    cgImage: cgImage,
-                    size: NSSize(width: cgImage.width, height: cgImage.height)
-                )
-                diffedImage = Image(nsImage: nsImage)
-            }
-
-        }
-    }
-}
-
-#Preview {
-    DifferenceView()
 }

@@ -12,9 +12,22 @@ struct DifferatiApp: App {
     @State private var selectedTab: ContentView.Tab = .sideBySide
 
     var body: some Scene {
-        WindowGroup {
-            ContentView(selectedTab: $selectedTab)
+        WindowGroup("Welcome") {
+            WelcomeView()
         }
+
+        WindowGroup("Image Diff", for: DiffImage.self) { $diff in
+            if let diff {
+                ContentView(diff: diff, selectedTab: $selectedTab)
+            } else {
+                ContentUnavailableView(
+                    "Image error",
+                    image: "exclamationmark.triangle",
+                    description: Text("Got an empty binding")
+                )
+            }
+        }
+        .commandsRemoved()
         .commands {
             CommandGroup(before: .toolbar) {
                 Button("Show Side by Side") { selectedTab = .sideBySide }

@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct OnionView: View {
-    let old = NSImage(named: "one")!
-    let new = NSImage(named: "two")!
+    let diff: DiffImage
 
     @State private var opacity = 1.0
 
     var body: some View {
         VStack {
             ZStack {
-                ImageView(nsImage: old)
+                ImageView(nsImage: diff.oldImage)
                     .border(.red)
-                ImageView(nsImage: new)
+                ImageView(nsImage: diff.newImage)
                     .border(.green)
                     .opacity(opacity)
             }
@@ -32,5 +31,5 @@ struct OnionView: View {
 }
 
 #Preview {
-    OnionView()
+    OnionView(diff: .preview)
 }
