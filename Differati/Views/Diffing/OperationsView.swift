@@ -63,6 +63,8 @@ struct OperationsView: View {
             }
             .padding()
         }
+        // “file” already exists. Do you want to replace it?
+        // A file or folder with the same name already exists in the folder “Downloads”. Replacing it will overwrite its current contents.
         .confirmationDialog("Replace old image with new image?", isPresented: $confirmingOverwriteOldWithNew) {
             Button("Replace", role: .destructive) {
                 copy(source: diff.newImageFileUrl, destination: diff.oldImageFileUrl)

@@ -13,8 +13,8 @@ struct DiffImage: Hashable, Codable {
     let newImageFileUrl: URL
 
     func validate() -> Bool {
-        // TODO: check if old + new still exist
-        true
+        FileManager.default.fileExists(atPath: oldImageFileUrl.path()) &&
+        FileManager.default.fileExists(atPath: newImageFileUrl.path())
     }
 
     var oldImage: NSImage {
