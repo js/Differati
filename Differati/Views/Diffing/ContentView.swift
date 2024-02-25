@@ -30,9 +30,7 @@ struct ContentView: View {
                 )
             }
 
-//            Button("Overwrite old with new") {
-//
-//            }
+            OperationsView(diff: diff)
         }
         .padding()
         .frame(minWidth: 700, minHeight: 400)

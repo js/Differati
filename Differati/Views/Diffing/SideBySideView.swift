@@ -27,7 +27,7 @@ struct SideBySideView: View {
     }
 
     var body: some View {
-        AdaptiveStack {
+        HStack {
             VStack(spacing: 6) {
                 Text("Old")
                     .foregroundStyle(Color.red)

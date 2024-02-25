@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C4C6312B8BC2190006246A /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4C6302B8BC2190006246A /* OperationsView.swift */; };
 		04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */; };
 		04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C52B88E29B00280F43 /* ContentView.swift */; };
 		04CCB7C82B88E29D00280F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CCB7C72B88E29D00280F43 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04C4C6302B8BC2190006246A /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
 		04CCB7C02B88E29B00280F43 /* Differati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differati.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferatiApp.swift; sourceTree = "<group>"; };
 		04CCB7C52B88E29B00280F43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				04CCB7C52B88E29B00280F43 /* ContentView.swift */,
+				04C4C6302B8BC2190006246A /* OperationsView.swift */,
 				04CCB7F02B890E4F00280F43 /* SideBySideView.swift */,
 				04CCB7F62B891A2C00280F43 /* SwipeView.swift */,
 				04CCB7F42B89122500280F43 /* OnionView.swift */,
@@ -397,6 +400,7 @@
 				04CCB7F52B89122500280F43 /* OnionView.swift in Sources */,
 				04CCB8002B8A42EE00280F43 /* ImageDiffer.swift in Sources */,
 				04CCB7FB2B8A40BD00280F43 /* DiffImage.swift in Sources */,
+				04C4C6312B8BC2190006246A /* OperationsView.swift in Sources */,
 				04CCB7F12B890E4F00280F43 /* SideBySideView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
