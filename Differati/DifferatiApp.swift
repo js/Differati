@@ -17,7 +17,9 @@ struct DifferatiApp: App {
         WindowGroup("Welcome") {
             WelcomeView()
                 .task {
-                    server.start(onReceive: handleMessage)
+                    server.start {
+                        handleMessage($0)
+                    }
                 }
         }
 
