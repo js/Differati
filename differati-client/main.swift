@@ -6,26 +6,11 @@
 //
 
 import Foundation
+import Cocoa
 
 guard CommandLine.arguments.count == 3 else {
     print("Usage: differati <old-image> <new-image>")
     exit(2)
-}
-
-let client = CommandClient()
-
-guard client.connect(port: "com.frosthaus.Differati") else {
-    // TODO: launch with NSWorkspace
-    print("Unable to connect to main Differati application. Is it running?")
-    exit(1)
-}
-
-let verbose = ProcessInfo.processInfo.environment["DIFFERATI_VERBOSE"] != nil
-
-func log(_ msg: String) {
-    if verbose {
-        NSLog(msg)
-    }
 }
 
 func stdErrorPrint(_ msg: String) {
@@ -37,6 +22,38 @@ func stdErrorPrint(_ msg: String) {
 
     var standardError = StandardError()
     print(msg, to: &standardError)
+}
+
+let client = CommandClient()
+let mainAppBundleId = "com.frosthaus.Differati"
+if client.connect(port: mainAppBundleId) == false {
+    guard let appUrl = NSWorkspace.shared.urlForApplication(withBundleIdentifier: mainAppBundleId) else {
+        stdErrorPrint("Unable to find main Differati application")
+        exit(1)
+    }
+
+    NSWorkspace.shared.openApplication(at: appUrl, configuration: .init()) { app, error in
+        if let error {
+            stdErrorPrint("Unable to open main Differati application: \(error)")
+            exit(1)
+        }
+    }
+
+    usleep(450_000)
+    
+    // try connecting again now that main app should be running
+    guard client.connect(port: mainAppBundleId) else {
+        stdErrorPrint("Unable to connect to main Differati application. Is it running?")
+        exit(1)
+    }
+}
+
+let verbose = ProcessInfo.processInfo.environment["DIFFERATI_VERBOSE"] != nil
+
+func log(_ msg: String) {
+    if verbose {
+        NSLog(msg)
+    }
 }
 
 // 0 is name of executable
