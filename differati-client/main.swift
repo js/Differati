@@ -20,18 +20,37 @@ guard client.connect(port: "com.frosthaus.Differati") else {
     exit(1)
 }
 
+let verbose = ProcessInfo.processInfo.environment["DIFFERATI_VERBOSE"] != nil
+
+func log(_ msg: String) {
+    if verbose {
+        NSLog(msg)
+    }
+}
+
+func stdErrorPrint(_ msg: String) {
+    class StandardError: TextOutputStream {
+        func write(_ string: String) {
+            try! FileHandle.standardError.write(contentsOf: Data(string.utf8))
+        }
+    }
+
+    var standardError = StandardError()
+    print(msg, to: &standardError)
+}
+
 // 0 is name of executable
 let old = CommandLine.arguments[1]
 let new = CommandLine.arguments[2]
 
-print("Diffing \(old) -> \(new)")
+log("Diffing \(old) -> \(new)")
 
 switch client.sendCommand("\(old)\n\(new)") {
 case .success(let response):
-    print("Server said: \(response)")
+    log("Server said: \(response)")
 case .failure(let error):
-    print(error)
+    stdErrorPrint("Communication error \(error)")
     exit(2)
 }
 
-print("Done")
+log("Done")

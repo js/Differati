@@ -25,6 +25,9 @@
 		04CCB8022B8A64D600280F43 /* CommandServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB8012B8A64D600280F43 /* CommandServer.swift */; };
 		04CCB80A2B8A665000280F43 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB8092B8A665000280F43 /* main.swift */; };
 		04CCB80F2B8A66ED00280F43 /* CommandClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB80E2B8A66ED00280F43 /* CommandClient.swift */; };
+		04CCB8112B8B7CE400280F43 /* CommandLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB8102B8B7CE400280F43 /* CommandLineTool.swift */; };
+		04CCB8132B8B844300280F43 /* differati-client in Copy CLI Files */ = {isa = PBXBuildFile; fileRef = 04CCB8072B8A665000280F43 /* differati-client */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		04CCB8152B8B88C000280F43 /* CommandLineInstallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB8142B8B88C000280F43 /* CommandLineInstallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		04CCB8122B8B842F00280F43 /* Copy CLI Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				04CCB8132B8B844300280F43 /* differati-client in Copy CLI Files */,
+			);
+			name = "Copy CLI Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +94,8 @@
 		04CCB8072B8A665000280F43 /* differati-client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "differati-client"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CCB8092B8A665000280F43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		04CCB80E2B8A66ED00280F43 /* CommandClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandClient.swift; sourceTree = "<group>"; };
+		04CCB8102B8B7CE400280F43 /* CommandLineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineTool.swift; sourceTree = "<group>"; };
+		04CCB8142B8B88C000280F43 /* CommandLineInstallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineInstallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +196,7 @@
 				04CCB7FA2B8A40BD00280F43 /* DiffImage.swift */,
 				04CCB7FF2B8A42EE00280F43 /* ImageDiffer.swift */,
 				04CCB8012B8A64D600280F43 /* CommandServer.swift */,
+				04CCB8102B8B7CE400280F43 /* CommandLineTool.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +207,7 @@
 				04CCB7FC2B8A40DF00280F43 /* Diffing */,
 				04CCB7F22B8910B100280F43 /* ImageView.swift */,
 				04CCB7FD2B8A410F00280F43 /* WelcomeView.swift */,
+				04CCB8142B8B88C000280F43 /* CommandLineInstallView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +243,7 @@
 				04CCB7BC2B88E29B00280F43 /* Sources */,
 				04CCB7BD2B88E29B00280F43 /* Frameworks */,
 				04CCB7BE2B88E29B00280F43 /* Resources */,
+				04CCB8122B8B842F00280F43 /* Copy CLI Files */,
 			);
 			buildRules = (
 			);
@@ -368,9 +387,11 @@
 			files = (
 				04CCB7F32B8910B100280F43 /* ImageView.swift in Sources */,
 				04CCB8022B8A64D600280F43 /* CommandServer.swift in Sources */,
+				04CCB8152B8B88C000280F43 /* CommandLineInstallView.swift in Sources */,
 				04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */,
 				04CCB7EF2B890A8D00280F43 /* DifferenceView.swift in Sources */,
 				04CCB7F72B891A2C00280F43 /* SwipeView.swift in Sources */,
+				04CCB8112B8B7CE400280F43 /* CommandLineTool.swift in Sources */,
 				04CCB7FE2B8A410F00280F43 /* WelcomeView.swift in Sources */,
 				04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */,
 				04CCB7F52B89122500280F43 /* OnionView.swift in Sources */,
@@ -546,6 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Differati/Differati.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -573,6 +595,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Differati/Differati.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

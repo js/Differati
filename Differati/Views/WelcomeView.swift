@@ -12,7 +12,10 @@ struct WelcomeView: View {
 
     var body: some View {
         VStack {
-            Button("Install command line tool") {}
+            GroupBox {
+                CommandLineInstallView()
+            }
+            .padding()
 
             Button("Test Diff") {
                 let diff = DiffImage(

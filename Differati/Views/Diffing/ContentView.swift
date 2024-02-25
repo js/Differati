@@ -35,7 +35,7 @@ struct ContentView: View {
 //            }
         }
         .padding()
-        .frame(minWidth: 400, minHeight: 300)
+        .frame(minWidth: 700, minHeight: 400)
     }
 
     private var tabView: some View {
