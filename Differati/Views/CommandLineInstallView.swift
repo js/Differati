@@ -25,33 +25,33 @@ struct CommandLineInstallView: View {
     }
 
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             Image(systemName: "apple.terminal.fill")
                 .font(.largeTitle)
-            VStack {
-                Text("Install ") +
-                Text("differati").monospaced() +
-                Text(" command-line tool\nto") +
-                Text("/usr/local/differati").monospaced()
 
-                if isInstalled {
+            Text("Install ") +
+            Text("differati").monospaced() +
+            Text(" command-line tool\nto") +
+            Text("/usr/local/differati").monospaced()
+
+            if isInstalled {
+                VStack {
                     HStack {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundStyle(Color.green)
                         Text("Installed")
-
-                        Button("Reinstall") {
-                            installCommandLineTool()
-                        }
                     }
-                } else {
-                    Button("Install") {
+                    Button("Reinstall") {
                         installCommandLineTool()
                     }
                 }
+            } else {
+                Button("Install") {
+                    installCommandLineTool()
+                }
             }
-            .padding()
         }
+        .padding()
         .task {
             await checkIfInstalled()
         }
