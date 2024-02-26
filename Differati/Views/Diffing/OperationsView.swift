@@ -29,10 +29,11 @@ struct OperationsView: View {
                         .truncationMode(.middle)
                         .font(.callout)
                         .padding(.bottom, 4)
+                        .lineLimit(1)
                     Button {
-                        confirmingOverwriteOldWithNew = true
+                        confirmingOverwriteNewWithOld = true
                     } label: {
-                        Text("Replace old with new")
+                        Label("Replace new with old", systemImage: "arrow.right")
                     }
                     Button("Reveal in Finder") {
                         reveal(url: diff.oldImageFileUrl)
@@ -51,10 +52,11 @@ struct OperationsView: View {
                         .truncationMode(.middle)
                         .font(.callout)
                         .padding(.bottom, 4)
+                        .lineLimit(1)
                     Button {
-                        confirmingOverwriteNewWithOld = true
+                        confirmingOverwriteOldWithNew = true
                     } label: {
-                        Text("Replace new with old")
+                        Label("Replace old with new", systemImage: "arrow.left")
                     }
                     Button("Reveal in Finder") {
                         reveal(url: diff.newImageFileUrl)
@@ -83,9 +85,9 @@ struct OperationsView: View {
 
     private func copy(source: URL, destination: URL) {
         do {
-            try FileManager.default.copyItem(at: source, to: destination)
+            _ = try FileManager.default.replaceItemAt(destination, withItemAt: source)
         } catch {
-            NSLog("failed to copy \(source) to \(destination)")
+            NSLog("failed to copy \(source) to \(destination): \(error)")
         }
     }
 

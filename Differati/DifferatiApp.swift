@@ -62,6 +62,7 @@ struct DifferatiApp: App {
             newImageFileUrl: URL(fileURLWithPath: pairs[1])
         )
 
+        NSLog("Opening from remote \(diff)")
         openWindow(value: diff)
 
         return nil
