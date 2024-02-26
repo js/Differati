@@ -69,6 +69,7 @@ struct ContentView: View {
                     Label("Replace Images", systemImage: "arrow.left.arrow.right")
                 }
                 .help("Replace Images With Each Other")
+                .keyboardShortcut("r", modifiers: .command)
             }
         }
         .sheet(isPresented: $isShowingOperationSheet) {
