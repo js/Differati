@@ -10,22 +10,6 @@ import SwiftUI
 struct SideBySideView: View {
     let diff: DiffImage
 
-    struct AdaptiveStack<Content>: View where Content: View {
-        @ViewBuilder let content: Content
-
-        var body: some View {
-            ViewThatFits {
-                HStack {
-                    content
-                }
-
-                VStack {
-                    content
-                }
-            }
-        }
-    }
-
     var body: some View {
         HStack {
             VStack(spacing: 6) {

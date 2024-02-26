@@ -11,6 +11,8 @@ struct ContentView: View {
     let diff: DiffImage
     @Binding var selectedTab: Tab
 
+    @State private var isShowingOperationSheet = false
+
     enum Tab: String {
         case sideBySide
         case swipe
@@ -30,29 +32,68 @@ struct ContentView: View {
                 )
             }
 
-            OperationsView(diff: diff)
+            StatusView(diff: diff)
         }
         .padding()
         .frame(minWidth: 700, minHeight: 400)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack {
+                    Picker("Tabs", selection: $selectedTab) {
+                        Label("2-Up", systemImage: "platter.2.filled.ipad.landscape")
+                            .tag(Tab.sideBySide)
+                            .help("Show Side-by-Side View")
+                        Label("Swipe", systemImage: "arrow.left.and.line.vertical.and.arrow.right")
+                            .tag(Tab.swipe)
+                            .help("Show Swipe View")
+                        Label("Onion", systemImage: "square.2.layers.3d")
+                            .tag(Tab.onion)
+                            .help("Show Onion View")
+                        Label("Difference", systemImage: "circlebadge.2")
+                            .tag(Tab.diff)
+                            .help("Show Difference View")
+                    }
+                    .pickerStyle(.segmented)
+                    .labelStyle(.titleOnly)
+
+                    Divider()
+
+                    Button {
+                        isShowingOperationSheet.toggle()
+                    } label: {
+                        Label("Replace Images", systemImage: "arrow.left.arrow.right")
+                    }
+                    .help("Replace Images With Each Other")
+                }
+            }
+        }
+        .sheet(isPresented: $isShowingOperationSheet) {
+           OperationsView(diff: diff)
+        }
     }
 
+    @ViewBuilder
     private var tabView: some View {
-        TabView(selection: $selectedTab) {
+        switch selectedTab {
+        case .sideBySide:
             SideBySideView(diff: diff)
                 .tabItem {
                     Label("2-Up", systemImage: "platter.2.filled.ipad.landscape")
                 }
                 .tag(Tab.sideBySide)
+        case .swipe:
             SwipeView(diff: diff)
                 .tabItem {
                     Label("Swipe", systemImage: "arrow.left.and.line.vertical.and.arrow.right")
                 }
                 .tag(Tab.swipe)
+        case .onion:
             OnionView(diff: diff)
                 .tabItem {
                     Label("Onion", systemImage: "square.2.layers.3d")
                 }
                 .tag(Tab.onion)
+        case .diff:
             DifferenceView(diff: diff)
                 .tabItem {
                     Label("Difference", systemImage: "circlebadge.2")

@@ -34,6 +34,8 @@ struct DifferatiApp: App {
                 )
             }
         }
+        .defaultSize(width: 800, height: 600)
+        .windowToolbarStyle(.unified)
         .commandsRemoved()
         .commands {
             CommandGroup(before: .toolbar) {

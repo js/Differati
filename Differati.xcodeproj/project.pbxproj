@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041022CB2B8D01C000D31844 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041022CA2B8D01C000D31844 /* StatusView.swift */; };
 		04C4C6312B8BC2190006246A /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4C6302B8BC2190006246A /* OperationsView.swift */; };
 		04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */; };
 		04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C52B88E29B00280F43 /* ContentView.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		041022CA2B8D01C000D31844 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		04C4C6302B8BC2190006246A /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
 		04C4C6322B8C7CD70006246A /* Differati.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Differati.xctestplan; path = Differati/Differati.xctestplan; sourceTree = "<group>"; };
 		04CCB7C02B88E29B00280F43 /* Differati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differati.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 			children = (
 				04CCB7C52B88E29B00280F43 /* ContentView.swift */,
 				04C4C6302B8BC2190006246A /* OperationsView.swift */,
+				041022CA2B8D01C000D31844 /* StatusView.swift */,
 				04CCB7F02B890E4F00280F43 /* SideBySideView.swift */,
 				04CCB7F62B891A2C00280F43 /* SwipeView.swift */,
 				04CCB7F42B89122500280F43 /* OnionView.swift */,
@@ -404,6 +407,7 @@
 				04CCB7FB2B8A40BD00280F43 /* DiffImage.swift in Sources */,
 				04C4C6312B8BC2190006246A /* OperationsView.swift in Sources */,
 				04CCB7F12B890E4F00280F43 /* SideBySideView.swift in Sources */,
+				041022CB2B8D01C000D31844 /* StatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
