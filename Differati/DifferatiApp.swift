@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct DifferatiApp: App {
-    @State private var selectedTab: ContentView.Tab = .sideBySide
+    @AppStorage("lastUsedTab") private var selectedTab: ContentView.Tab = .sideBySide
     @State private var server = CommandServer()
     @Environment(\.openWindow) private var openWindow
 

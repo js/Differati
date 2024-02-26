@@ -11,7 +11,7 @@ struct ContentView: View {
     let diff: DiffImage
     @Binding var selectedTab: Tab
 
-    enum Tab: Hashable {
+    enum Tab: String {
         case sideBySide
         case swipe
         case onion
