@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "C366C436-930F-4F80-8D1E-701318496E4F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Differati.xcodeproj",
+      "identifier" : "04CCB7BF2B88E29B00280F43",
+      "name" : "Differati"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Differati.xcodeproj",
+        "identifier" : "04CCB7D02B88E29E00280F43",
+        "name" : "DifferatiTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Differati.xcodeproj",
+        "identifier" : "04CCB7DA2B88E29E00280F43",
+        "name" : "DifferatiUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

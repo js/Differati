@@ -73,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		04C4C6302B8BC2190006246A /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
+		04C4C6322B8C7CD70006246A /* Differati.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Differati.xctestplan; path = Differati/Differati.xctestplan; sourceTree = "<group>"; };
 		04CCB7C02B88E29B00280F43 /* Differati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differati.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferatiApp.swift; sourceTree = "<group>"; };
 		04CCB7C52B88E29B00280F43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		04CCB7B72B88E29B00280F43 = {
 			isa = PBXGroup;
 			children = (
+				04C4C6322B8C7CD70006246A /* Differati.xctestplan */,
 				04CCB7C22B88E29B00280F43 /* Differati */,
 				04CCB7D42B88E29E00280F43 /* DifferatiTests */,
 				04CCB7DE2B88E29E00280F43 /* DifferatiUITests */,
