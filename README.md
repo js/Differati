@@ -1,10 +1,9 @@
 <p align="center">
   <img src="https://github.com/js/Differati/blob/main/Differati/Assets.xcassets/AppIcon.appiconset/Icon-256.png?raw=true" height="128">
   <h1 align="center">Differati</h1>
-  <h2 align="center">Differati sees all change (between two images)</h2>
 </p>
 
-Differati is a macOS app for visually showing differences between two images. 
+Differati is a macOS app for visually showing differences between two images. _Differati sees all change (between two images)_
 
 ## Motivation
 
