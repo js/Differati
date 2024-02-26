@@ -37,7 +37,7 @@ struct ContentView: View {
         .padding()
         .frame(minWidth: 700, minHeight: 400)
         .toolbar {
-            ToolbarItem(placement: .principal) {
+            ToolbarItem(id: "tabs", placement: .principal, showsByDefault: true) {
                 HStack {
                     Picker("Tabs", selection: $selectedTab) {
                         Label("2-Up", systemImage: "platter.2.filled.ipad.landscape")
@@ -55,16 +55,20 @@ struct ContentView: View {
                     }
                     .pickerStyle(.segmented)
                     .labelStyle(.titleOnly)
-
-                    Divider()
-
-                    Button {
-                        isShowingOperationSheet.toggle()
-                    } label: {
-                        Label("Replace Images", systemImage: "arrow.left.arrow.right")
-                    }
-                    .help("Replace Images With Each Other")
                 }
+            }
+
+            ToolbarItem(id: "spacer", placement: .principal, showsByDefault: true) {
+                Spacer()
+            }
+
+            ToolbarItem(id: "replace", placement: .principal, showsByDefault: true) {
+                Button {
+                    isShowingOperationSheet.toggle()
+                } label: {
+                    Label("Replace Images", systemImage: "arrow.left.arrow.right")
+                }
+                .help("Replace Images With Each Other")
             }
         }
         .sheet(isPresented: $isShowingOperationSheet) {
