@@ -15,7 +15,7 @@ By setting the `differati` command line tool as `SnapshotTesting.diffTool` image
 
 <img src="Screenshots/test_failure.png" />
 
-Copying the command and running it from the terminal will open up Differati in compare mode, comparing to two images. You can also chose to either overwrite the old or new image, to update the snapshot test image.
+Copying the command and running it from the terminal (command line client can be install from the main macOS app) will open up Differati in compare mode, comparing to two images. You can also chose to either overwrite the old or new image, to update the snapshot test image.
 
 <img src="Screenshots/2up.png" />
 <img src="Screenshots/replace.png" />
@@ -28,6 +28,10 @@ Copying the command and running it from the terminal will open up Differati in c
 - Onion: change opacity to reveal differences
 - Difference: Only differences between the two images are shown, optioncally with false color
 - Easily overwrite old image with new, or the other way around
+
+## Installation
+
+Build and run from Xcode, or download the prebuilt binary from the [project's Github releases](https://github.com/js/Differati/releases)
 
 ## License
 
