@@ -47,9 +47,6 @@ struct CommandLineInstallView: View {
                     installCommandLineTool()
                 }
             }
-
-            Text("Usage: `differati oldfile.png newfile.png`")
-                .font(.subheadline)
         }
         .padding()
         .multilineTextAlignment(.center)
