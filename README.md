@@ -7,13 +7,19 @@ Differati is a macOS app for visually showing differences between two images. _D
 
 ## Motivation & Usage
 
-It was born out of frustration working with [`swift-snapshot-testing`](https://github.com/pointfreeco/swift-snapshot-testing) test failures within Xcode.
+It was born out of frustration working with [`swift-snapshot-testing`](https://github.com/pointfreeco/swift-snapshot-testing) test failures within Xcode. I find Xcode's test navigator clunky and it seems to not always update the diff it shows of the snapshots.
 
 Differati comes with a command line utility to easily open image diffs, it can be installed from the main macOS app. By invoking it with the two image files to compare, eg `differati old.png new.png`, it will open the main app and visually show the differences.
 
-By setting the `differati` command line tool as `SnapshotTesting.diffTool` image snapshots tests can easily be diffed from failed tests, and the saved snapshot can be updated or discarded.
+By setting the `differati` command line tool as `SnapshotTesting.diffTool` image snapshots tests can easily be diffed from failed tests, and the saved snapshot can be updated or discarded. It is probably useful for other similar snapshot testing scenarios using a similar approach.
 
-It is probably useful for other similar snapshot testing scenarios using a similar approach.
+<img src="Screenshots/test_failure.png" />
+
+Copying the command and running it from the terminal will open up Differati in compare mode, comparing to two images. You can also chose to either overwrite the old or new image, to update the snapshot test image.
+
+<img src="Screenshots/2up.png" />
+<img src="Screenshots/replace.png" />
+
 
 ## Features
 
