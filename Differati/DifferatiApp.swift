@@ -13,14 +13,29 @@ struct DifferatiApp: App {
     @State private var server = CommandServer()
     @Environment(\.openWindow) private var openWindow
 
+    @State private var isPresentingUrlOpenError = false
+    @State private var urlOpenError: OpenURLError?
+
+    private let welcomeWindowId = "welcome-window"
+
     var body: some Scene {
-        WindowGroup("Welcome") {
+        WindowGroup("Welcome", id: welcomeWindowId) { _ in
             WelcomeView()
                 .task {
                     server.start {
                         handleMessage($0)
                     }
                 }
+                .onOpenURL { url in
+                    handleOpenURL(url)
+                }
+                .alert(isPresented: $isPresentingUrlOpenError, error: urlOpenError) { error in
+                    Button("OK") {}
+                } message: { error in
+                    Text(error.recoverySuggestion ?? "Try a valid differati url.")
+                }
+        } defaultValue: {
+            welcomeWindowId
         }
 
         WindowGroup("Image Diff", for: DiffImage.self) { $diff in
@@ -68,5 +83,35 @@ struct DifferatiApp: App {
         openWindow(value: diff)
 
         return nil
+    }
+
+    struct OpenURLError: LocalizedError {
+        var errorDescription: String? {
+            "Could not open unknown or badly formed URL"
+        }
+    }
+
+    private func handleOpenURL(_ url: URL) {
+        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return }
+
+        guard components.host == "show" else {
+            urlOpenError = OpenURLError()
+            isPresentingUrlOpenError = true
+            return
+        }
+        guard
+            let oldPath = components.queryItems?.first(where: { $0.name == "old" })?.value,
+            let newPath = components.queryItems?.first(where: { $0.name == "new" })?.value
+        else {
+            urlOpenError = OpenURLError()
+            isPresentingUrlOpenError = true
+            return
+        }
+
+        let oldFileUrl = URL(filePath: oldPath.removingPercentEncoding ?? oldPath)
+        let newFileUrl = URL(filePath: newPath.removingPercentEncoding ?? oldPath)
+
+        let diff = DiffImage(oldImageFileUrl: oldFileUrl, newImageFileUrl: newFileUrl)
+        openWindow(value: diff)
     }
 }

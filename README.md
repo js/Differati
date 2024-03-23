@@ -20,6 +20,8 @@ Copying the command and running it from the terminal (command line client can be
 <img src="Screenshots/2up.png" />
 <img src="Screenshots/replace.png" />
 
+Besides the command line client, Differati also supports the `differati://` URL scheme for opening a new compare view:
+`differati://show?old=/fully/url-encoded/path.png&new=/fully/url-encoded/other-path.png`
 
 ## Features
 
