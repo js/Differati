@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     @Environment(\.openWindow) private var openWindow
+    @State private var isDropZoneTargeted = false
 
     var body: some View {
         VStack {
@@ -20,7 +21,7 @@ struct WelcomeView: View {
                             handleDrop(items: items)
                         },
                         isTargeted: { isTargeted in
-
+                            isDropZoneTargeted = isTargeted
                         }
                     )
             }
@@ -63,12 +64,15 @@ struct WelcomeView: View {
         }
         .padding()
         .multilineTextAlignment(.center)
-        .frame(minWidth: 128, minHeight : 128)
+        .frame(minWidth: 152, minHeight : 152)
         .aspectRatio(contentMode: .fit)
         .background {
             RoundedRectangle(cornerRadius: 22)
-                .fill(Color(NSColor.secondarySystemFill))
-                .stroke(Color.gray, style: .init(lineWidth: 2, dash: [6]))
+                .fill(Color(isDropZoneTargeted ? NSColor.selectedControlColor : NSColor.secondarySystemFill))
+                .stroke(
+                    isDropZoneTargeted ? Color(NSColor.selectedContentBackgroundColor) : Color.gray,
+                    style: .init(lineWidth: 2, dash: [6])
+                )
         }
     }
 }
