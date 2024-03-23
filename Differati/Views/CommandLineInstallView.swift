@@ -29,10 +29,7 @@ struct CommandLineInstallView: View {
             Image(systemName: "apple.terminal.fill")
                 .font(.largeTitle)
 
-            Text("Install ") +
-            Text("differati").monospaced() +
-            Text(" command-line tool\nto") +
-            Text("/usr/local/differati").monospaced()
+            Text("Install `differati` command-line tool to`/usr/local/differati`")
 
             if isInstalled {
                 VStack {
@@ -50,15 +47,16 @@ struct CommandLineInstallView: View {
                     installCommandLineTool()
                 }
             }
+
+            Text("Usage: `differati oldfile.png newfile.png`")
+                .font(.subheadline)
         }
         .padding()
+        .multilineTextAlignment(.center)
         .task {
             await checkIfInstalled()
         }
-        .alert(
-            isPresented: $isPresentingError,
-            error: presentedError
-        ) { _ in
+        .alert(isPresented: $isPresentingError, error: presentedError) { error in
             Button("OK") {}
         } message: { error in
             Text(error.recoverySuggestion ?? "Try again later.")

@@ -56,7 +56,7 @@ struct WelcomeView: View {
         }
         .padding()
         .multilineTextAlignment(.center)
-        .frame(minWidth: 152, minHeight : 152)
+        .frame(minWidth: 252, minHeight : 252)
         .aspectRatio(contentMode: .fit)
         .background {
             RoundedRectangle(cornerRadius: 22)
