@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct DiffImage: Hashable, Codable {
     let oldImageFileUrl: URL
@@ -14,7 +15,9 @@ struct DiffImage: Hashable, Codable {
 
     func validate() -> Bool {
         FileManager.default.fileExists(atPath: oldImageFileUrl.path()) &&
-        FileManager.default.fileExists(atPath: newImageFileUrl.path())
+        FileManager.default.fileExists(atPath: newImageFileUrl.path()) &&
+        oldImageFileUrl.isImage &&
+        newImageFileUrl.isImage
     }
 
     var oldImage: NSImage {
@@ -23,6 +26,19 @@ struct DiffImage: Hashable, Codable {
 
     var newImage: NSImage {
         NSImage(contentsOf: newImageFileUrl)!
+    }
+}
+
+private extension URL {
+    var isImage: Bool {
+        guard
+            let resourceValues = try? resourceValues(forKeys: [.contentTypeKey]),
+            let contentType = resourceValues.contentType
+        else {
+            return false
+        }
+
+        return contentType.conforms(to: UTType.image)
     }
 }
 
