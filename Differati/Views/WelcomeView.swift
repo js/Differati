@@ -31,14 +31,6 @@ struct WelcomeView: View {
                 CommandLineInstallView()
             }
             .padding()
-
-            Button("Test Diff") {
-                let diff = DiffImage(
-                    oldImageFileUrl: URL(fileURLWithPath: "/Users/johan/Desktop/differati/one.jpg"),
-                    newImageFileUrl: URL(fileURLWithPath: "/Users/johan/Desktop/differati/two.jpg")
-                )
-                openWindow(value: diff)
-            }
         }
         .padding()
     }
