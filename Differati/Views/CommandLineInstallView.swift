@@ -66,7 +66,7 @@ struct CommandLineInstallView: View {
     }
 
     private func checkIfInstalled() async {
-        isInstalled = FileManager.default.fileExists(atPath: CommandLineTool.shared.destination)
+        isInstalled = CommandLineTool.shared.isInstalled
     }
 
     private func installCommandLineTool() {

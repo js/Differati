@@ -18,31 +18,12 @@ final class CommandLineTool {
         case missingSoruceTool
     }
 
-    func currentVersion() throws -> String {
-        throw CommandLineToolError.notInstalled
+    var isInstalled: Bool {
+        FileManager.default.fileExists(atPath: destination)
     }
 
-    func _install() async throws {
-        guard let toolUrl = Bundle.main.resourceURL?.appending(path: "differati-client") else {
-            NSLog("Failed to get URL to shell command")
-            throw CommandLineToolError.missingSoruceTool
-        }
-
-        let auth = try await NSWorkspace.shared.requestAuthorization(to: .createSymbolicLink)
-        let authedFileManager = FileManager(authorization: auth)
-
-        if authedFileManager.fileExists(atPath: destination) {
-            try authedFileManager.removeItem(atPath: destination)
-        }
-
-        do {
-            NSLog("Authed – will link \(toolUrl.path) <- \(destination)")
-            // Does this ever work?
-            try authedFileManager.createSymbolicLink(at: URL(filePath: destination), withDestinationURL: toolUrl)
-        } catch {
-            NSLog("Running fallback shell install because: \(error)")
-            appleScriptShellInstallation(commandPath: toolUrl.path, destinationPath: destination)
-        }
+    func currentVersion() throws -> String {
+        throw CommandLineToolError.notInstalled
     }
 
     func install() async throws {
@@ -54,35 +35,46 @@ final class CommandLineTool {
         appleScriptShellInstallation(commandPath: toolUrl.path, destinationPath: destination)
     }
 
-    func appleScriptShellInstallation(commandPath: String, destinationPath: String) {
-        // from https://github.com/CodeEditApp/CodeEdit/pull/667
+    private func appleScriptShellInstallation(commandPath: String, destinationPath: String) {
         let msg = "Create \(destinationPath) symbolic link"
-        let cmd = [
+
+        let script = if isInstalled {
+            "mkdir -p /usr/local/bin && rm \'\(destinationPath)\' && ln -sf \'\(commandPath)\' \'\(destinationPath)\'"
+        } else {
+            "mkdir -p /usr/local/bin && ln -sf \'\(commandPath)\' \'\(destinationPath)\'"
+        }
+
+        // AuthorizationExecuteWithPrivileges is deprecated since forever and NSWorkspace.shared.requestAuthorization
+        // seems to oonly work for sandboxed apps (? not working for me anyway).
+        // Use osascript to get auth instead, cargo culted from https://github.com/CodeEditApp/CodeEdit/pull/667
+        let cmdStr = [
             "osascript",
             "-e",
-            "\"do shell script \\\"mkdir -p /usr/local/bin && rm \'\(destinationPath)\' && ln -sf \'\(commandPath)\' \'\(destinationPath)\'\\\"",
+            "\"do shell script \\\"\(script)\\\"",
             "with prompt \\\"\(msg)\\\" with administrator privileges\""
-        ]
+        ].joined(separator: " ")
 
-        let cmdStr = cmd.joined(separator: " ")
+        do {
+            let output = try execute(command: cmdStr)
+            NSLog("osascript ran with output: \(output ?? "(nil)")")
+        } catch {
+            NSLog("fallback shell install error: \(error)")
+        }
+    }
 
+    private func execute(command: String) throws -> String? {
         let task = Process()
         let pipe = Pipe()
 
         task.standardOutput = pipe
         task.standardError = pipe
-        task.arguments = ["-c", cmdStr]
+        task.arguments = ["-c", command]
         task.executableURL = URL(fileURLWithPath: "/bin/zsh")
         task.standardInput = nil
 
-        do {
-            try task.run()
+        try task.run()
 
-            let data = pipe.fileHandleForReading.readDataToEndOfFile()
-            let output = String(data: data, encoding: .utf8) ?? ""
-            NSLog("osascript ran with output: \(output)")
-        } catch {
-            NSLog("fallback shell install error: \(error)")
-        }
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        return String(data: data, encoding: .utf8)
     }
 }
