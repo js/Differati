@@ -19,8 +19,11 @@ struct DifferatiApp: App {
     private let welcomeWindowId = "welcome-window"
 
     var body: some Scene {
-        WindowGroup("Welcome", id: welcomeWindowId) { _ in
+        WindowGroup("Welcome", id: welcomeWindowId) {
             WelcomeView()
+                .onAppear {
+                    hackyWindowStyle()
+                }
                 .task {
                     server.start {
                         handleMessage($0)
@@ -34,9 +37,10 @@ struct DifferatiApp: App {
                 } message: { error in
                     Text(error.recoverySuggestion ?? "Try a valid differati url.")
                 }
-        } defaultValue: {
-            welcomeWindowId
         }
+        .defaultPosition(.center)
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
 
         WindowGroup("Image Diff", for: DiffImage.self) { $diff in
             if let diff {
@@ -49,6 +53,7 @@ struct DifferatiApp: App {
                 )
             }
         }
+        .defaultPosition(.center)
         .defaultSize(width: 800, height: 600)
         .windowToolbarStyle(.unified)
         .commandsRemoved()
@@ -64,6 +69,21 @@ struct DifferatiApp: App {
                     .keyboardShortcut("4", modifiers: .command)
                 Divider()
             }
+        }
+    }
+
+    private func hackyWindowStyle() {
+        DispatchQueue.main.async {
+            let window = NSApplication.shared.windows.first(where: {
+                $0.identifier?.rawValue.hasPrefix(welcomeWindowId) ?? false
+            })
+            guard let window else {
+                return
+            }
+
+            window.isMovableByWindowBackground = true
+            window.standardWindowButton(.miniaturizeButton)?.isHidden = true
+            window.standardWindowButton(.zoomButton)?.isHidden = true
         }
     }
 

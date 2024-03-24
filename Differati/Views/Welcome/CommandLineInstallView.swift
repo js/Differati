@@ -30,6 +30,8 @@ struct CommandLineInstallView: View {
                 .font(.largeTitle)
 
             Text("Install `differati` command-line tool to`/usr/local/differati`")
+                .layoutPriority(1)
+                .lineLimit(2, reservesSpace: true)
 
             if isInstalled {
                 VStack {

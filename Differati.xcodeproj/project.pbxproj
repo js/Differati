@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		041022CB2B8D01C000D31844 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041022CA2B8D01C000D31844 /* StatusView.swift */; };
+		0480197B2BB0676A00E2A2A1 /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480197A2BB0676A00E2A2A1 /* DropZoneView.swift */; };
+		0480197D2BB067AA00E2A2A1 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480197C2BB067AA00E2A2A1 /* IconView.swift */; };
 		04C4C6312B8BC2190006246A /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4C6302B8BC2190006246A /* OperationsView.swift */; };
 		04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C32B88E29B00280F43 /* DifferatiApp.swift */; };
 		04CCB7C62B88E29B00280F43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB7C52B88E29B00280F43 /* ContentView.swift */; };
@@ -76,6 +78,8 @@
 		041022CA2B8D01C000D31844 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		0419B83D2BAEEA97008EFDF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		044C9E3C2BAF4C02002CC097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0480197A2BB0676A00E2A2A1 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
+		0480197C2BB067AA00E2A2A1 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		04C4C6302B8BC2190006246A /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
 		04C4C6322B8C7CD70006246A /* Differati.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Differati.xctestplan; path = Differati/Differati.xctestplan; sourceTree = "<group>"; };
 		04CCB7C02B88E29B00280F43 /* Differati.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Differati.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +141,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048019792BB0675C00E2A2A1 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB7FD2B8A410F00280F43 /* WelcomeView.swift */,
+				0480197A2BB0676A00E2A2A1 /* DropZoneView.swift */,
+				0480197C2BB067AA00E2A2A1 /* IconView.swift */,
+				04CCB8142B8B88C000280F43 /* CommandLineInstallView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		04CCB7B72B88E29B00280F43 = {
 			isa = PBXGroup;
 			children = (
@@ -216,8 +231,7 @@
 			children = (
 				04CCB7FC2B8A40DF00280F43 /* Diffing */,
 				04CCB7F22B8910B100280F43 /* ImageView.swift */,
-				04CCB7FD2B8A410F00280F43 /* WelcomeView.swift */,
-				04CCB8142B8B88C000280F43 /* CommandLineInstallView.swift */,
+				048019792BB0675C00E2A2A1 /* Welcome */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,8 +420,10 @@
 				04CCB8112B8B7CE400280F43 /* CommandLineTool.swift in Sources */,
 				04CCB7FE2B8A410F00280F43 /* WelcomeView.swift in Sources */,
 				04CCB7C42B88E29B00280F43 /* DifferatiApp.swift in Sources */,
+				0480197B2BB0676A00E2A2A1 /* DropZoneView.swift in Sources */,
 				04CCB7F52B89122500280F43 /* OnionView.swift in Sources */,
 				04CCB8002B8A42EE00280F43 /* ImageDiffer.swift in Sources */,
+				0480197D2BB067AA00E2A2A1 /* IconView.swift in Sources */,
 				04CCB7FB2B8A40BD00280F43 /* DiffImage.swift in Sources */,
 				04C4C6312B8BC2190006246A /* OperationsView.swift in Sources */,
 				04CCB7F12B890E4F00280F43 /* SideBySideView.swift in Sources */,
