@@ -18,9 +18,9 @@ struct StatusView: View {
                     .foregroundStyle(Color.red)
                 Text(verbatim: diff.oldImageFileUrl.path)
                     .truncationMode(.middle)
-                    .font(.callout)
                     .padding(.bottom, 4)
                     .lineLimit(1)
+                size(image: diff.oldImage)
                 Button("Reveal in Finder") {
                     reveal(url: diff.oldImageFileUrl)
                 }
@@ -37,12 +37,24 @@ struct StatusView: View {
                     .font(.callout)
                     .padding(.bottom, 4)
                     .lineLimit(1)
+                size(image: diff.newImage)
+                    .fontWeight(
+                        diff.oldImage.size != diff.newImage.size ? .bold : .regular
+                    )
                 Button("Reveal in Finder") {
                     reveal(url: diff.newImageFileUrl)
                 }
             }
         }
+        .font(.callout)
         .padding(.horizontal)
+    }
+
+    @ViewBuilder
+    private func size(image: NSImage) -> some View {
+        let width = Double(image.size.width).formatted(.number.rounded())
+        let height = Double(image.size.height).formatted(.number.rounded())
+        Text(verbatim: "\(width)𝗑\(height)")
     }
 
     private func reveal(url: URL) {
